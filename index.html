@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <link rel="shortcut icon" href="./assets/img/favicon.ico">
+</head>
+
+<body class="body">
+  <audio class="audio" src="./assets/music/hbd.mp3" autoplay type="audio" loop=""></audio>
+  <div class="open">
+    <div class="card">
+      <h2>Ada pesan buat kamu</h2>
+      <img onclick="mulai()" src="./assets/img/mail.png" alt="" srcset="" />
+      <h3>Tekan untuk membuka</h3>
+    </div>
+  </div>
+  <div class="atas" id="atas">
+    <img onclick="mulai()" src="./assets/img/sticker.png" alt="" />
+    <h2>Selamat Ulang Tahun LILIS 🎂 </h2>
+    <br>
+    <h2>Scroll kebawah ya 😇 </h2>
+  </div>
+  <p data-aos="zoom-in">Today is ...</p>
+  <p data-aos="zoom-in">as beautiful as other days</p>
+	<p data-aos="zoom-in">but you realize</p>
+	<p data-aos="zoom-in">another year has gone</p>
+	<p data-aos="zoom-in">in a blink of the eyes</p>
+	<p data-aos="zoom-in"><strong>however</strong></p>
+	<p data-aos="zoom-in">Do you know..?</p>
+	<p data-aos="zoom-in">today is just special</p>
+	<p data-aos="zoom-in">that's why</p>
+	<p data-aos="zoom-in">Let's make it...</p>
+	<p data-aos="zoom-in">the best celebration ever</p>
+	<p data-aos="zoom-in">and let me share...</p>
+	<p data-aos="zoom-in">a piece of happiness to you</p>
+	<p data-aos="zoom-in">I made all this...</p>
+	<p data-aos="zoom-in">as a birthday present to you</p>
+	<p data-aos="zoom-in">thanks for being there</p>
+	<p data-aos="zoom-in">thanks for the friendship we made</p>
+	<p data-aos="zoom-in">thanks for everything</p>
+	<p data-aos="zoom-in">I wish you all the best</p>
+	<p data-aos="zoom-in">May your life be at ease</p>
+	<p data-aos="zoom-in">May all your wishes come true</p>
+	<p data-aos="zoom-in">Remember</p>
+	<p data-aos="zoom-in">your ambitions</p>
+	<p data-aos="zoom-in">you live as a free bird...</p>
+	<p data-aos="zoom-in">flying in the blue sky</p>
+	<p data-aos="zoom-in">Now things are different...</p>
+	<p data-aos="zoom-in">real story of your life</p>
+	<p data-aos="zoom-in">is just about to begin</p>
+	<p data-aos="zoom-in">indeed..</p>
+	<p data-aos="zoom-in">but...</p>
+	<p data-aos="zoom-in">don't worry</p>
+	<p data-aos="zoom-in">because...</p>
+	<p data-aos="zoom-in">God has your back</p>
+	<p data-aos="zoom-in">and</p>
+	<p data-aos="zoom-in">this year will be better</p>
+	<p data-aos="zoom-in">and I hope</p>
+	<p data-aos="zoom-in">you'll find...</p>
+	<p data-aos="zoom-in">happiness along the way</p>
+	<p data-aos="zoom-in">keep your spirit up</p>
+	<p data-aos="zoom-in">enjoy every single moment...</p>
+	<p data-aos="zoom-in">that you experience today</p>
+	<p data-aos="zoom-in">fill it with your most beautiful smile</p>
+	<p data-aos="zoom-in">and make it the best memory..</p>
+	<p data-aos="zoom-in">lastly...</p>
+	<p data-aos="zoom-in">I'd like to wish you one more time</p>
+	<p data-aos="zoom-in">a very happy birthday Siti Holisoh</p>
+
+  <p data-aos="zoom-in">Pencet love nya
+    <i onclick="tanya()" class="material-icons-sharp"> favorite </i>
+  </p>
+  
+  <p class="wm"><span><a href="https://api.whatsapp.com/send/?phone=628976446653&text&type=phone_number&app_absent=0">By XNoName</a></span></p>
+  
+  <script>
+    var musik = "";
+  </script>
+  <script> AOS.init({ once: true, }); </script>
+  <script>
+    var audio = document.querySelector(".audio");
+    if (musik) {
+      audio.src = musik; } function mulai() { audio.play(); document.querySelector(".open").style = "opacity: 0;"; document.querySelector(".body").style = "overflow-y: scroll;";
+      setTimeout(function () { document.querySelector(".open").style.display = "none"; }, 1000);
+    } 
+    
+    function wa(isi) {
+      window.open("https://api.whatsapp.com/send?phone=628976446653&text=Makasih%20ya%20udah%20inget%20ulang%20tahun%20aku,%20di%20hari%20spesial%20ini%20aku%20pengen%20" + isi); 
+    } 
+
+    async function tanya() {
+      var { value: kado } = await swal.fire({ title: "Di hari spesial ini kamu pengin nya apa?", input: "text", showCancelButton: false, });
+      if (kado) { 
+        await swal.fire("Kirim jawabannya ke wa aku ya"); wa(kado); 
+      } 
+      else { await swal.fire("Jangan dikosongin dong 😢"); tanya(); } 
+    }
+  </script>
+</body>
+
+</html>
